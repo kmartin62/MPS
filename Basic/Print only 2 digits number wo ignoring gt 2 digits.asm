@@ -84,6 +84,8 @@ jg pecati_dvocifren    ; ako e dvocifren broj, odi vo pecati_dvocifren
 add dl, 30h
 mov ah, 02h                 ; pecati ednocifren
 int 21h
+mov dl, ' '
+int 21h
 
 inc di
 loop print
@@ -101,6 +103,9 @@ int 21h                        ; pecati dvocifren
 
 mov dl, dh
 add dl, 30h
+int 21h
+
+mov dl, ' '
 int 21h
 
 inc di
